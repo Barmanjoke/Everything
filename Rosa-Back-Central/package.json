@@ -1,0 +1,46 @@
+{
+  "name": "rosa-back-central",
+  "version": "0.4.0",
+  "description": "Rosa project - central backend",
+  "main": "server.js",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barmanjoke/Rosa-Back-Central.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Barmanjoke/Rosa-Back-Central/issues"
+  },
+  "homepage": "https://github.com/Barmanjoke/Rosa-Back-Central#readme",
+  "scripts": {
+    "build:spec": "cd ./src/api && tsoa swagger && tsoa routes",
+    "build": "npm run build:spec && tsc",
+    "start": "cross-env NODE_PATH=./build/ node build/server.js"
+  },
+  "dependencies": {
+    "@tsoa/runtime": "^3.13.0",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-query-auto-parse": "^3.0.1",
+    "js-yaml": "^4.1.0",
+    "loglevel": "^1.8.0",
+    "loglevel-plugin-prefix": "^0.8.4",
+    "pg": "^8.7.3",
+    "qs": "^6.10.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@tsoa/cli": "^3.14.1",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^17.0.23",
+    "@types/pg": "^8.6.5",
+    "@types/uuid": "^8.3.4",
+    "cross-env": "^7.0.3",
+    "typescript": "^4.6.2"
+  }
+}
